@@ -9,6 +9,7 @@ SELECT
 FROM pg_stat_statements 
 ORDER BY 1 DESC 
 LIMIT 100;
+
 --Slow query
 select round(( 100 * total_time / sum(total_time) over ())::numeric, 2) percent,
              round(total_time::numeric, 2) as total,
